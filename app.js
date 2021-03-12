@@ -1,6 +1,7 @@
 //solution to Problem 1
 $(function(){
   //changes wishes ID
+  //ADDED ON HERE
    $("#wishes").text("I hate you, Bob");
    
 });
