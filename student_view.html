@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Assignment02: JavaScript, HTML and jQuery</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Assignment 3: JavaScript, HTML and jQuery</h1>
+
+  <p>To complete this assignment, you will need to modify <code>app.js</code>.</p>
+
+  <p>For each problem, write JavaScript code <strong>in the linked file</strong>. Use comments to indicate the code for each problem, like:</p>
+
+  <pre>// Solution for problem 1</pre>
+
+  <p>You will edit this file only to add JavaScript-friendly tags (e.g. <code>div</code>, <code>span</code>) and <code>class</code> and <code>id</code> attributes. <strong>No inline code or event handlers</strong>.</p>
+
+  <p>Keep in mind that the linked JavaScript page runs top-to-bottom <em>as soon as it is retrieved</em>, not when the page is done loading. If you need something to only trigger when the page is done loading, you are responsible for doing that.</p>
+
+  <p>When you are done, compress these files as a zip and submit on Blackboard.</p>
+
+  <h2>Using JavaScript...</h2>
+  
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 1</h4>
+    <p>Replace the text below with "I hate you, Bob."</p>
+  </div>
+  
+  <div class="panel-body">
+    <p id="wishes">Happy Birthday, Bob!</p>
+  </div>
+</div>  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 2</h4>
+    <p>Change the image below to this one: https://images.homedepot-static.com/productImages/473f00c4-673f-4208-bd94-fe64a0cc40ac/svn/hi-line-gift-garden-statues-87808-b-64_1000.jpg</p>
+    <p><em>(hint: don't change all the images on the page! adding div and span tags and attributes like id and class is part of enabling JavaScript.)</em></p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img id="changeDuck"src="https://img.buzzfeed.com/buzzfeed-static/static/campaign_images/webdr01/2013/5/29/17/tumblr-really-loves-this-duckling-1-28612-1369861410-6_big.jpg"/></p>
+  </div>
+</div>  
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 3</h4>
+    <p>Make all the images below only 300 pixels wide.</p>
+    <p><em>(hint: you shouldn't have to do the same thing three times!)</em></p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img class="animals" src="https://stoppestinfo.com/images/news/2017/02/how-to-get-rid-of-gophers-what-is-more-efficient-gopher-traps-poisons-or-repellents-gopher-control-which-methods-are-approved-by-scientists.jpg"/></p>
+    <p><img class="animals" src="https://www.petmd.com/sites/default/files/botflies-maggots-dogs.jpg"/></p>
+    <p><img class="animals" src="https://www.petmd.com/sites/default/files/dog-myths-warm-nose-505287115.jpg"/></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 4</h4>
+    <p>When the button below is pushed, make the text red and twice as big.</p>
+  </div>
+  
+  <div class="panel-body">
+    <p><button class="btn btn-primary">Click Me</button> <span id="yell">AHHHHHH!</span></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 5</h4>
+    <p>Make the hidden message below appear when you click on the image.</p>
+  </div>
+  
+  <div class="panel-body">
+    <p><img id="circle" src="http://files.softicons.com/download/application-icons/soft-scraps-icons-by-deleket/png/128/Button%20Blank%20Green-01.png">
+      <span class="hidden" id="showing">Soylent Green is people!</span></p>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 6</h4>
+    <p>Make a thick, yellow border appear on the images below when the mouse is hovering over them. (And go away when it moves off).</p>
+  </div>
+  
+  <div class="panel-body">
+    <div>
+      <img class="menu" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/1200px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg"/>
+      <img class="menu" src="https://ichef.bbci.co.uk/news/660/cpsprodpb/1325A/production/_88762487_junk_food.jpg"/>
+      <img class="menu" src="https://media-cdn.tripadvisor.com/media/photo-s/0e/85/48/e6/seven-mile-beach-grand.jpg"/>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 7</h4>
+    <p>Echo whatever the user types (letter-by-letter as they type it!) in the first textbox into the second textbox.</p>
+  </div>
+  
+  <div class="panel-body">
+    <input class="typing"type="textbox">
+    <input class="writing"type="textbox">
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 8</h4>
+    <p>When the user finishes typing in the textbox and leaves it (hits tab or clicks elsewhere), replace what they wrote with "HAHA".</p>
+  </div>
+  
+  <div class="panel-body">
+    <input class="erase"type="textbox">
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 9</h4>
+    <p>Make the checkbox enable/disable the drop-down select box.</p>
+  </div>
+  
+  <div class="panel-body">
+    <input class="box"type="checkbox">Enable</input>
+    <select class="selection">
+      <option value="0">Blue</option>
+      <option value="1">3 lbs of cornmeal</option>
+      <option value="2">Cats</option>
+    </select>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4>Problem 10</h4>
+    <p>Make the buttons below functional.</p>
+    <p>"View Complete" should show only completed todo list items. "View Incomplete" should show only incomplete todo list items. "View All" should show all todo list items.</p>
+  </div>
+  <div class="panel-body">
+    <button id="completeBTN">View Complete</button>
+    <button id="incompleteBTN">View Incomplete</button>
+    <button id="allBTN">View All</button>
+
+    <h3>Todo List</h3>
+    <ul>
+      <li class="todo1 incomplete">Take out the trash</li>
+      <li class="todo1 incomplete">Feed the dog</li>
+      <li class="todo1 incomplete">Grade papers</li>
+      <li class="todo2 complete">Uninstall Zoom</li>
+      <li class="todo2 complete">Upload HW</li>
+      <li class="todo2 complete">Take out the trash</li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
