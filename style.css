@@ -51,3 +51,8 @@ body {
   display: inline-block;
   font-size: 16px;
 }
+
+.container-fluid{
+  position: absolute;
+right: 0%;
+}
