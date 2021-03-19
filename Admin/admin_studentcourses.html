@@ -10,7 +10,7 @@
     <!-- Connects the css used to style -->
     <link rel="stylesheet" href="style.css">
     <!-- Name of tab  -->
-    <title>Admin View</title>
+    <title>Student Courses</title>
 </head>
   
   
@@ -21,7 +21,7 @@
 <!-- UTRGV Logo -->
 <nav class="navbar navbar-light bg-light nav justify-content-end">
   <div class="container-fluid">
-      <img src="https://www.utrgv.edu/umc/_files/images/creative/athletics-logo.png" alt="" width="200" height="100" class="d-inline-block align-top"> 
+    <img src="https://utrgv.ridesystems.net/Images/clientLogo.jpg" alt="" width="200" height="80" class="d-inline-block align-top"> 
   </div>
 </nav>
 
@@ -38,7 +38,37 @@
 
 
 
-<h1> This is the Student Courses page </h1>
+<form class="row g-3">
+  
+  <div class="col-md-4">
+    <label for="userID" class="form-label">User ID</label>
+    <input type="text" class="form-control" id="userID" name="userID">
+  </div>
+  
+  <div class="col-md-3">
+    <label for="courseID" class="form-label">Course ID</label>
+    <input type="text" class="form-control" id="courseID" name="courseID">
+  </div>
+  
+  <div class="col-md-3">
+    <label for="semester" class="form-label">Semester</label>
+    <input type="text" class="form-control" id="semester" name="semester">
+  </div>
+
+ 
+  <div class="input-group mb-2">
+    <select class="form-select" id="grades">
+      <option selected>Grade</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Add Class</button>
+  </div>
+</form>
 
 
 
