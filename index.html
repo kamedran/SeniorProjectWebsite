@@ -14,15 +14,18 @@
 
 
 <body class="text-center">
-  <form class ="form-signin">
+
+
+
+  <form class ="form-signin" method="GET">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
     <label for="inputEmail" class="visually-hidden">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
     <label for="inputPassword" class="visually-hidden">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
       <label>
-        <input type="checkbox" value="remember-me"> Remember me
+        <input type="checkbox" value="remember-me" id="check"> Remember me
       </label>
     </div>
     <!-- This button will direct to student view -->
@@ -32,7 +35,7 @@
     <a class ="btnforsite" href="Admin/admin_view_student.html">Admin</a>
     
     <!-- This button does not work but will go back to fix it-->
-    <a href="Student/student_view.html"><button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button></a>
+    <button class="w-100 btn btn-lg btn-primary" id="signBtn">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
 
