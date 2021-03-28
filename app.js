@@ -1,6 +1,7 @@
 $(document).ready(function () {
     ///This runs the click only once
-    $("#signBtn").unbind("click").click(function () {
+    $("#signBtn").unbind("click").click(function (event) {
+        //event.preventDefault();
         let email = $("#inputEmail").val().trim();
         let password = $("#inputPassword").val().trim();
 
@@ -15,16 +16,23 @@ $(document).ready(function () {
             $.ajax({
                 url: "http://localhost:8080/api/login?username=" + email + "&password=" + password,
                 type: 'get',
-                dataType: 'json',
+                //async: false,
+                //dataType: 'json',
                 data: { username: email, password: password },
                 //FIGURE OUT WHAT TO DO WITH DATA
-                success: function(response){
+                /* success: function(response){
                     alert(response.token);
                 },
                 error: () => {
                     alert("Wrong Username " + email);
-                }
-            });
+                } */
+            }).done(function(reponse){
+                //var obj = JSON.parse(data);
+                alert("success");
+            }).fail(function(error ){
+                //alert("Fail" + error);
+                $("#error").removeClass("wrongText");
+            }) 
         }
     });
     ///for registration form 
@@ -47,16 +55,11 @@ $(document).ready(function () {
             $.ajax({
                 url: "http://localhost:8080/api/register?username=" + username + "&password=" + password + "&firstName=" + firstName + "&lastName=" + lastName,
                 type: 'post',
-                //responseType:'application/json',
                 data: { username: username, password: password, fn: firstName, ln: lastName },
-                success: function (response) {
-                    if (response == 200) {
-                        // newWindow.location.href = "https://www.yahoo.com";
-                        // }else{
-                        console.log("hello");
-                    }
-                }
-            });
+            
+            }).done(function(){
+                alert("Account Succesfully Registered");
+            })
         }
     });
     ///for registration form 
