@@ -13,17 +13,28 @@
     <title>Admin View</title>
 </head>
   
+<style>
+x{color: white}
+o{color: #cf4411}
+
+.btnforsite{
+  background-color: #cf4411; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
   
   
-<body>
+<body class="text-center" style="background-color:#65646a;">
     
     
-<!-- UTRGV Logo -->
-<nav class="navbar navbar-light bg-light nav justify-content-end">
-  <div class="container-fluid">
-    <img src="https://utrgv.ridesystems.net/Images/clientLogo.jpg" alt="" width="200" height="80" class="d-inline-block align-top"> 
-  </div>
-</nav>
+
 
 
 
@@ -31,28 +42,35 @@
 <!-- Form for Admin to Enter  -->
 <form class="row g-3">
   
-  <div class="col-md-4">
-    <label for="inputEmail4" class="form-label">Username</label>
-    <input type="text" class="form-control" id="username" name="username">
-  </div>
+  <img src="utrgvlogo.png" alt="" width="270" height="90" class="d-inline-block align-top" id="logos"> 
+
+
   
   <div class="col-md-4">
-    <label for="categoryName" class="form-label">Password</label>
+    <x><label for="inputEmail4" class="form-label">Username</label></x>
+    <input type="text" class="form-control" id="username" name="username">
+  </div>
+</p>
+  
+<p style="text-align:center"></p>
+  <div class="col-md-4">
+    <x><label for="categoryName" class="form-label">Password</label></x>
     <input type="text" class="form-control" id="password" name="password">
   </div>
+</p>
 
   <div class="col-md-2">
-    <label for="categoryNumber" class="form-label">First Name</label>
+    <x><label for="categoryNumber" class="form-label">First Name</label></x>
     <input type="text" class="form-control" id="firstName" name="firstName">
   </div>
   
   <div class="col-md-2">
-    <label for="catalogYear" class="form-label">Last Name</label>
+    <x><label for="catalogYear" class="form-label">Last Name</label></x>
     <input type="text" class="form-control" id="lastName" name="lastName">
   </div>
   
   <div class="col-12">
-    <button type="submit" class="btn btn-primary" id="register">Register</button>
+    <button type="submit" class="btnforsite" id="register">Register</button>
   </div>
 </form>
 
