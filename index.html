@@ -13,35 +13,37 @@
 </head>
 
 
-<body class="text-center">
+<body class="text-center" style="background-color:#65646a;">
 
-
-
+  
   <form class ="form-signin" method="GET">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    <label for="inputEmail" class="visually-hidden">Email address</label>
-    <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="visually-hidden">Password</label>
+    <img src="utrgvlogo.png" alt="" width="270" height="90" class="d-inline-block align-top" id="logos"> 
+    <!-- This is for user to be able to sign in -->
+    <h1 class="h3 mb-3 fw-normal" id="enterText">Sign In with Your Account</h1>
+    <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" id="spacingEmail" required autofocus>
+    <p> </p>
     <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
       <label>
         <input type="checkbox" value="remember-me" id="check"> Remember me
       </label>
     </div>
+    
     <!-- This button will direct to student view -->
     <a class ="btnforsite" href="Student/student_view.html">Students</a>
-    
     <!-- This button will direct to admin view -->
     <a class ="btnforsite" href="Admin/admin_view_student.html">Admin</a>
-    <!-- This button will direct to registration view -->
-    <a class ="btnforsite" href="registration.html">Registration</a>
+
     <div>
       <hi class="wrongText" id="error">Wrong Password</hi>
     </div>
     
     <!-- This button does not work but will go back to fix it-->
-    <button class="w-100 btn btn-lg btn-primary" id="signBtn">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    <button type="submit" class="w-100 btn btn-lg" id="signBtn">Login</button>
+    <p></p>
+     <!-- This button will direct to registration view -->
+    <button class="w-100 btn btn-lg" id="registrationBtn" onClick="location.href='registration.html'" type="button"> Registration</button>
+
   </form>
 
 <script src="https://code.jquery.com/jquery.min.js"></script>

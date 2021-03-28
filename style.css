@@ -42,9 +42,9 @@ body {
 }
 
 .btnforsite{
-  background-color: #4CAF50; /* Green */
+  background-color: white; /* Green */
   border: none;
-  color: white;
+  color: #cf4411;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -60,5 +60,24 @@ right: 0%;
 .wrongText{
   display: none;
 }
+
+#signBtn{
+  background-color: #cf4411;
+  color: white;
+}
+
+#registrationBtn{
+  background-color: white;
+  color: #cf4411;
+}
+
+#enterText{
+  color: white;
+}
+
+label{
+  color: white;
+}
+
 
 
