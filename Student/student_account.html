@@ -16,6 +16,41 @@
     <title>Student Account</title>
   </head>
   
+
+  <style>
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Green */
+.success {
+  color: orange;
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: orange;
+}
+
+.success {
+    position: fixed; /* or position: absolute; */
+    top: 0;
+    right: 0;
+}
+
+
+
+
+  </style>
+
+
+
+
   
   <body>
     
@@ -27,6 +62,12 @@
   </div>
 </nav>
 
+
+<button class="btn success">Success</button>
+
+
+
+
 <!-- NAV bar with the links -->
 <nav class="nav">
   <a class="nav-link active" aria-current="page" href="student_view.html">Overview</a>
@@ -37,6 +78,9 @@
 
 <h1> This is the Account page </h1>
 
+
+
+
 <!-- What the student will see:  -->
 
 <nav class="nav">
@@ -46,12 +90,50 @@
   <input type="radio" id="Spanish" name="gender" value="Spanish">
   <label for="Spanish">Spanish</label><br>
   
-  
-    
-  </form> 
+<!-- Experiment from here  -->
+<TABLE BORDER="0">
+  <TR>
+      <TD>New Name:</TD>
+      <TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="fname">
+      </TD>
+  </TR>
+  <TR>
+      <TD>New Username:</TD>
+      <TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="phnnum">
+      </TD>
+  </TR>
+  <TR>
+    <TD>New Password:</TD>
+    <TD ALIGN="left"><INPUT TYPE="text" SIZE="25" NAME="phnnum">
+    </TD>
+    <TR>
+      <TD class = "select">Language:         
+      </TD>   
+      <TD ALIGN="center">
+         <select>        
+              <option value="volvo">English</option>
+              <option value="saab">Spanish</option>
+              
+         </select>
+      </TD>        
+  </TR>
+</TABLE>
+
+<INPUT TYPE="submit" VALUE="Submit">
+  <INPUT TYPE="reset" VALUE="Clear">
+
+
+
+
+<!-- To here  -->
+</form> 
   
   
 </nav>
+
+<!--Cut:  -->
+<!--Cut:  -->
+
 
 <!--Cut:  -->
 
