@@ -13,27 +13,28 @@ $(document).ready(function () {
                 type: 'get',
                 data: { username: email, password: password },
             }).done(function (response) {
+                //returns token as a string 
                 var obj = JSON.stringify(response)
                 console.log(obj)
                 //alert("working");
+                //ajax response to check if the user is an admin or student 
                 $.ajax({
                     url: "http://localhost:8080/isAdmin",
                     type: 'get',
-                    
                 }).done(function (reponse) {
+                    //opens the window for admin 
                     //var obj = JSON.stringify(reponse);
-                    console.log("succesfully in")
-                    //alert("working");
+                    //console.log("succesfully in")
+                    //window.location.replace("http://www.w3schools.com");
 
                 }).fail(function (error) {
+                    //opens the window to the student signed in as the user is not signed in 
                     console.log("failure on my part")
-                    //$("#error").removeClass("wrongText");
-                    //window.open("");
+                    window.location.replace("Student/student_view.html");
                 })
             }).fail(function (error) {
-                //alert("Fail");
+                //Error message that shows user entered wrong password/email
                 $("#error").removeClass("wrongText");
-                //window.open("");
             })
 
 
@@ -46,7 +47,7 @@ $(document).ready(function () {
 
 
 
-//add popup
+//Registers the user
 $(document).ready(function () {
     ///This runs the click only once
     $("#register").unbind("click").click(function () {
@@ -54,7 +55,6 @@ $(document).ready(function () {
         let password = $("#password").val().trim();
         let firstName = $("#firstName").val().trim();
         let lastName = $("#lastName").val().trim();
-        //var newWindow = window.open("");
 
         if (username != "" && password != "" && firstName != "" && lastName != "") {
             //Triggers this call when correct email and password are inputted
@@ -64,12 +64,11 @@ $(document).ready(function () {
                 data: { username: username, password: password, fn: firstName, ln: lastName },
 
             }).done(function () {
-                alert("Account Succesfully Registered");
+                $("#success").removeClass("wrongText");
             })
         }
     });
-    ///for registration form 
 });
-//fix login design
+
 
 
