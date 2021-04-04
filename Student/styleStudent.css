@@ -1,14 +1,7 @@
 html,
 body {
   height: 100%;
-}
-
-body {
-  display: flex;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-color: #65646a;;
 }
 
 .form-signin {
@@ -42,9 +35,9 @@ body {
 }
 
 .btnforsite{
-  background-color: white; /* Green */
+  background-color: #4CAF50; /* Green */
   border: none;
-  color: #cf4411;
+  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -52,41 +45,29 @@ body {
   font-size: 16px;
 }
 
-.container-fluid{
-  position: absolute;
-right: 0%;
+.navbar-custom {
+  background-color: #65646a;
 }
 
-.wrongText{
-  display: none;
-}
-
-#signBtn{
+.tabs{
   background-color: #cf4411;
+}
+
+.nav-link{
   color: white;
 }
 
-#registrationBtn{
+#logout{
   background-color: white;
   color: #cf4411;
 }
 
-#enterText{
+h2{
   color: white;
 }
 
-label{
+h1{
   color: white;
-}
-
-#register{
-  background-color: #cf4411;
-  color: white;
-}
-
-.alert {
-  width: 300px;
-  height: 48px;
 }
 
 

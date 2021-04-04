@@ -17,9 +17,13 @@
 
   
   <form class ="form-signin">
-    <img src="utrgvlogo.png" alt="" width="270" height="90" class="d-inline-block align-top" id="logos"> 
+    <img src="./images/utrgvlogo.png" alt="" width="270" height="90" class="d-inline-block align-top" id="logos"> 
     <!-- This is for user to be able to sign in -->
     <h1 class="h3 mb-3 fw-normal" id="enterText">Sign In with Your Account</h1>
+    <!-- This is displayed when user gets wrong password or email -->
+    <div class="alert alert-danger wrongText" role="alert" id="error">
+      Wrong Password/Email
+    </div>
     <input type="text" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" id="spacingEmail" required autofocus>
     <p> </p>
     <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
@@ -34,9 +38,7 @@
     <!-- This button will direct to admin view -->
     <a class ="btnforsite" href="Admin/admin_view_student.html">Admin</a>
 
-    <div>
-      <hi class="wrongText" id="error">Wrong Password</hi>
-    </div>
+    
     
     <!-- This button does not work but will go back to fix it-->
     <button type="button" class="w-100 btn btn-lg" id="signBtn">Login</button>
