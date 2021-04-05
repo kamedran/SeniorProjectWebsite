@@ -11,42 +11,13 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Connects the css used to style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleStudent.css">
     <!-- Name of tab  -->
     <title>Student Account</title>
   </head>
   
 
-  <style>
-.btn {
-  border: none;
-  background-color: inherit;
-  padding: 14px 28px;
-  font-size: 20px;
-  cursor: pointer;
-  display: inline-block;
-}
-
-/* Green */
-.success {
-  color: orange;
-}
-
-.success:hover {
-  background-color: #4CAF50;
-  color: orange;
-}
-
-.success {
-    position: fixed; /* or position: absolute; */
-    top: 0;
-    right: 0;
-}
-
-
-
-
-  </style>
+  
 
 
 
@@ -56,20 +27,22 @@
     
     
 <!-- UTRGV Logo -->
-<nav class="navbar navbar-light bg-light nav justify-content-end">
+<nav class="navbar navbar-light navbar-custom nav justify-content-end logo">
   <div class="container-fluid">
-      <img src="https://www.utrgv.edu/umc/_files/images/creative/athletics-logo.png" alt="" width="200" height="100" class="d-inline-block align-top">
-  </div>
+      <img src="../images/utrgvlogo.png" alt="" width="270" height="100" class="d-inline-block align-top">
+      <button class="btn" type="button" id="logout" onClick="location.href='../index.html'">LogOut</button>
+    </div>
 </nav>
 
 
-<button class="btn success">Success</button>
+
 
 
 
 
 <!-- NAV bar with the links -->
-<nav class="nav">
+<!-- NAV bar with the links --> 
+<nav class="nav tabs">
   <a class="nav-link active" aria-current="page" href="student_view.html">Overview</a>
   <a class="nav-link" href="student_courses.html">Courses</a>
   <a class="nav-link" href="student_account.html">Account</a>

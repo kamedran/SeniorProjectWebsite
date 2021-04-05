@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!-- Connects the css used to style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleStudent.css">
     <!-- Name of tab  -->
     <title>Add Course</title>
     <!-- Inserted from here -->
@@ -26,11 +26,23 @@
     
     
 <!-- UTRGV Logo -->
-<nav class="navbar navbar-light bg-light nav justify-content-end">
+<nav class="navbar navbar-light navbar-custom nav justify-content-end logo">
   <div class="container-fluid">
-      <img src="https://utrgv.ridesystems.net/Images/clientLogo.jpg" alt="" width="200" height="80" class="d-inline-block align-top"> 
-  </div>
+      <img src="../images/utrgvlogo.png" alt="" width="270" height="100" class="d-inline-block align-top">
+      <button class="btn" type="button" id="logout" onClick="location.href='../index.html'">LogOut</button>
+    </div>
 </nav>
+
+
+<!-- NAV bar with the links --> 
+<nav class="nav tabs">
+  <a class="nav-link active" aria-current="page" href="student_view.html">Overview</a>
+  <a class="nav-link" href="student_courses.html">Courses</a>
+  <a class="nav-link" href="student_account.html">Account</a>
+</nav>
+
+
+
 
 <h1> The General Cores are: </h1>
 <!-- Inserted from here -->
