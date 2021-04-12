@@ -69,5 +69,7 @@ h2{
 h1{
   color: white;
 }
-
+.information{
+  display: none;
+}
 
