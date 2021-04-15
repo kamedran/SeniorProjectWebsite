@@ -69,7 +69,19 @@ h2{
 h1{
   color: white;
 }
-
+.information{
+  display: none;
+}
+#searchingBtn{
+  background-color: white;
+  color: #cf4411;
+}
+.searchbox{
+  color: white;
+}
+.wrongText{
+  display: none;
+}
 
 
 

@@ -11,7 +11,6 @@ $(document).ready(function () {
             $.ajax({
                 url: "http://localhost:8080/api/login?username=" + email + "&password=" + password,
                 type: 'get',
-                data: { username: email, password: password },
             }).done(function (response) {
                 //ajax response to check if the user is an admin or student 
                 isAdmin(response);
@@ -52,24 +51,68 @@ $(document).ready(function () {
     $("#searchingBtn").unbind("click").click(function (event) {
         event.preventDefault();
         let studentEmail = $("#studentEmail").val().trim();
-       // let studentID = $("#studentID").val().trim();
+        // let studentID = $("#studentID").val().trim();
         $.ajax({
-            url: "http://localhost:8080/userInfo",
+            url: "http://localhost:8080/userInfo?Email=" + studentEmail,
             type: 'get',
             //headers: { Authorization: 'Bearer ' + result },
             headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
-            data: { email: studentEmail },
+            //data: { email: studentEmail },
         }).done(function (response) {
             //ajax response to check if the user is an admin or student 
-            var obj = JSON.stringify(response);
-            console.log(obj);
-
+            studentCourse()
+            response = JSON.parse(response);
+            $("#error").addClass("wrongText");
+            $("#student").text(response.FirstName + " " + response.LastName);
+            $("#GPA").text(response.GPA);
+            $("#catYear").text(response.CatalogYear);
+            //Makes sure that correct classification shows based on hours
+            if (response.Hours < 30) {
+                $("#class").text("Freshman");
+            } else if (response.Hours > 30 && response.Hours < 60) {
+                $("#class").text("Sophomore");
+            } else if (response.Hours > 60 && response.Hours < 90) {
+                $("#class").text("Junior");
+            } else {
+                $("#class").text("Senior");
+            }
+            $("#hours").text(response.Hours);
+            $("#ADhours").text(response.AdvancedHours);
+            $("#hidden").removeClass("information");
         }).fail(function () {
             //Error message that shows user entered wrong password/email
-            console.log("unable to load")
+            $("#error").removeClass("wrongText");
         })
     });
 });
+
+//displays student courses for student 
+function studentCourse(){
+    let studentEmail = $("#studentEmail").val().trim();
+    $.ajax({
+        url: "http://localhost:8080/MyAndAllCourses?Email=" + studentEmail,
+        type: 'get',
+        headers: {
+            Authorization: 'Bearer ' + localStorage.getItem('token')
+        }
+    }).done(function (reponse) {
+        //opens the window for admin 
+        //window.location.assign("Admin/admin_view_student.html")
+        var obj = JSON.stringify(reponse);
+        console.log(obj);
+    }).fail(function (error) {
+        //opens the window to the student page
+        console.log("failure")
+    })
+}
+
+
+
+
+
+
+
+
 
 
 //Registers the user

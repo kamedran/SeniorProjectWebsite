@@ -37,10 +37,15 @@
   <a class="nav-link" href="admin_createplan.html">Create Degree Plan</a>
 </nav>
 
-
+<p></p>
+<!-- This is displayed when user gets wrong password or email -->
+<div class="alert alert-danger wrongText w-25 p-3 mx-auto text-center" role="alert" id="error">
+  Student not found
+</div>
 
 <!-- Admin enters Student Identification(id/email) -->
-<form class="row g-3">
+<div >
+<form class="row g-3 searchbox">
   <div class="col-md-6">
     <label for="studentEmail" class="form-label">Student Email</label>
     <input type="text" class="form-control" id="studentEmail" name="studentEmail">
@@ -52,11 +57,21 @@
   </div>
 
   <div class="col-12">
-    <button type="button" class="btn btn-primary" id="searchingBtn">Find Student</button>
+    <button type="button" class="btn" id="searchingBtn">Find Student</button>
   </div>
 </form>
+</div>
 
-
+<div class="information" id="hidden">
+  <h1> Student: <span id="student"> </span> </h1>
+  <p></p>
+  <h2>GPA: <span id="GPA"> </span></h2>
+  <p></p>
+  <h2>Catalog Year: <span id="catYear"> </span> </h2>
+  <h2>Classification: <span id="class"> </span></h2>
+  <h2>Total Hours: <span id="hours"> </span></h2>
+  <h2>Total Advanced Hours: <span id="ADhours"> </span></h2>
+</div>
 
 
     
