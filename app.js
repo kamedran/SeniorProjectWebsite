@@ -66,6 +66,8 @@ $(document).ready(function () {
             headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
             data: { Email: studentEmail },
         }).done(function (response) {
+            //removes error message when correct user is entered
+            $("#error").addClass("wrongText");
             //Sends email to course function that will display all classes available 
             studentCourse(studentEmail)
             //shows student information 
@@ -90,6 +92,8 @@ $(document).ready(function () {
         }).fail(function () {
             //Error message that shows user entered wrong password/email
             $("#error").removeClass("wrongText");
+            $("#hidden").addClass("information");
+            $("#title").addClass("removal");
         })
     });
 });
