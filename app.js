@@ -9,8 +9,10 @@ $(document).ready(function () {
         if (email != "" && password != "") {
             //Triggers this call when correct email and password are inputted
             $.ajax({
-                url: "http://localhost:8080/api/login?username=" + email + "&password=" + password,
+                url: "http://localhost:8080/api/login",
                 type: 'get',
+                //sends params
+                data: {username:email, password:password}
             }).done(function (response) {
                 //ajax response to check if the user is an admin or student 
                 isAdmin(response);
@@ -49,20 +51,25 @@ function isAdmin(isAdmin) {
 ///This runs the click only once
 $(document).ready(function () {
     $("#searchingBtn").unbind("click").click(function (event) {
+        
+    //Empties out DOM from courses, grades and semesters
+            $('.name').empty();
+            $('.grade').empty();
+            $('.semester').empty();
+ 
         event.preventDefault();
         let studentEmail = $("#studentEmail").val().trim();
-        // let studentID = $("#studentID").val().trim();
+        
         $.ajax({
-            url: "http://localhost:8080/userInfo?Email=" + studentEmail,
+            url: "http://localhost:8080/userInfo",
             type: 'get',
-            //headers: { Authorization: 'Bearer ' + result },
             headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
-            //data: { email: studentEmail },
+            data: { Email: studentEmail },
         }).done(function (response) {
-            //ajax response to check if the user is an admin or student 
-            studentCourse()
+            //Sends email to course function that will display all classes available 
+            studentCourse(studentEmail)
+            //shows student information 
             response = JSON.parse(response);
-            $("#error").addClass("wrongText");
             $("#student").text(response.FirstName + " " + response.LastName);
             $("#GPA").text(response.GPA);
             $("#catYear").text(response.CatalogYear);
@@ -78,6 +85,7 @@ $(document).ready(function () {
             }
             $("#hours").text(response.Hours);
             $("#ADhours").text(response.AdvancedHours);
+            //unhides the div to show information when button is clicked
             $("#hidden").removeClass("information");
         }).fail(function () {
             //Error message that shows user entered wrong password/email
@@ -87,27 +95,44 @@ $(document).ready(function () {
 });
 
 //displays student courses for student 
-function studentCourse(){
-    let studentEmail = $("#studentEmail").val().trim();
+function studentCourse(studentEmail){
     $.ajax({
-        url: "http://localhost:8080/MyAndAllCourses?Email=" + studentEmail,
+        url: "http://localhost:8080/MyAndAllCourses",
         type: 'get',
         headers: {
             Authorization: 'Bearer ' + localStorage.getItem('token')
-        }
-    }).done(function (reponse) {
-        //opens the window for admin 
-        //window.location.assign("Admin/admin_view_student.html")
-        var obj = JSON.stringify(reponse);
-        console.log(obj);
+        },
+        data: { Email: studentEmail },
+    }).done(function (response) {
+        //show title of courses
+        $("#title").removeClass("removal");
+        response = JSON.parse(response);
+        //goes through array to send to function that will display courses with grade and semester
+        $.each(response, function (index, value) {
+            //if a class has no grade, it will no display
+            if(value.Grade != "n"){
+            displayClasses(value.Name, value.Grade, value.Semester);
+            }
+        });
     }).fail(function (error) {
-        //opens the window to the student page
+        //shows you failed
         console.log("failure")
     })
 }
 
-
-
+//displays the courses that students have completed based on the template
+function displayClasses(courses, grades, semester){
+    //making copy of template
+    let copy = $(".template").clone();
+    //removing template class
+    copy.removeClass("template");
+    //replaces text with name of course
+    copy.find(".name").text(courses);
+    copy.find(".grade").text("Grade: " + grades);
+    copy.find(".semester").text("Semester: " + semester);
+    //displays list
+    $("#course-list").append(copy);
+}
 
 
 
