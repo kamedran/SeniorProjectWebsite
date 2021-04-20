@@ -48,77 +48,48 @@
 
 
 <h1>Calculate your GPA: </h1>
-<form>
-
+<CENTER>
     <FORM Name="GPACalcForm">
-    
-    <TABLE BORDER=5 BGCOLOR=#C0C0C0 CELLPADDING="5" CELLSPACING="2">
-    
-    <TH></TH>
-    
-    <TH>Letter Grade</TH>
-    
-    <TH>Credits</TH>
-    
-    <TR>
-    
-    <TD>Class 1</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR1" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR1" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
-    
-    <TR>
+        <TABLE BORDER=5 BGCOLOR=#C0C0C0 CELLPADDING="5" CELLSPACING="2">
+        <TH></TH>
+        <TH>Letter Grade</TH>
+        <TH>Credits</TH>
+        <TR>
+        <TD>Class 1</TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR1" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR1" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
+        <TR>
     
     <TD>Class 2</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR2" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR2" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
-    
-    <TR>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR2" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR2" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
+        <TR>
     
     <TD>Class 3</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR3" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR3" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
-    
-    <TR>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR3" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR3" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
+        <TR>
     
     <TD>Class 4</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR4" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR4" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
-    
-    <TR>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR4" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR4" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
+        <TR>
     
     <TD>Class 5</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR5" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR5" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR5" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR5" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
     
     <TR>
     
     <TD>Class 6</TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR6" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR6" ALIGN=TOP MAXLENGTH=5></TD>
-    
-    </TR>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="GR6" ALIGN=TOP MAXLENGTH=5></TD>
+        <TD><INPUT TYPE=TEXT SIZE=5 NAME="CR6" ALIGN=TOP MAXLENGTH=5></TD>
+        </TR>
     
     <TR ALIGN=CENTER>
     
@@ -134,23 +105,18 @@
     
     <P>
     
-    
-    
+        
     <P>
     
-    </form>
+    </CENTER>
     
     
     
     <BR>
-    
-    
-    
-    
-    
+                 
        <SCRIPT LANGUAGE="JavaScript">
     
-    
+     
     
     function gpacalc()
     
@@ -284,7 +250,6 @@
     
             {
     
-                
             alert("Error- Could not recognize the grade entered for Class " + eval(x + 1) + ". Please use standard college grades in the form of A A- B+ ...F.");
     
             return 0;
@@ -292,33 +257,41 @@
             }
     
         }
-        
-        // this if-check prevents a divide by zero error
+    
+    
+    
+    // this if-check prevents a divide by zero error
     
     if (allcr == 0)
     
         {
     
-            
         alert("Error- You did not enter any credit values! GPA = N/A");
     
-
-
         return 0;
     
         }
     
-       
+    
+    
     gpa = allgr / allcr;
     
-        
-    alert("GPA =  " + eval(gpa));
-       
-        return 0;
+    
+     alert("GPA =  " + eval(gpa)); 
+    
+    
+    
+    
+    return 0;
     
     }
-   
+    
+    
+    
+    //-->
+    
         </SCRIPT>
+    
 
         
     
