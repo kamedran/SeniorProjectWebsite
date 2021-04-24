@@ -87,8 +87,16 @@ h1{
 }
 .removal{
   display:none;
+  text-decoration: underline;
+}
+#box{
+  border-top: 2px solid black;
+  color: white;
 }
 
+#title{
+  text-decoration: underline;
+}
 
 
 
