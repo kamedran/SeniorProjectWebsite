@@ -72,4 +72,20 @@ h1{
 .information{
   display: none;
 }
-
+.tablecontent{
+  color: white;
+}
+input{
+  margin-right: 5px;
+}
+.addCourse{
+  background-color: white;
+  color: #cf4411;
+}
+.courseInfo{
+  display:none;
+}
+#courses{
+  background-color: white;
+  color: #cf4411;
+}
