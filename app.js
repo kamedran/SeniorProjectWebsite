@@ -12,7 +12,7 @@ $(document).ready(function () {
                 url: "http://localhost:8080/api/login",
                 type: 'get',
                 //sends params
-                data: {username:email, password:password}
+                data: { username: email, password: password }
             }).done(function (response) {
                 //ajax response to check if the user is an admin or student 
                 isAdmin(response);
@@ -51,15 +51,15 @@ function isAdmin(isAdmin) {
 ///This runs the click only once
 $(document).ready(function () {
     $("#searchingBtn").unbind("click").click(function (event) {
-        
-    //Empties out DOM from courses, grades and semesters
-            $('.name').empty();
-            $('.grade').empty();
-            $('.semester').empty();
- 
+
+        //Empties out DOM from courses, grades and semesters
+        $('.name').empty();
+        $('.grade').empty();
+        $('.semester').empty();
+
         event.preventDefault();
         let studentEmail = $("#studentEmail").val().trim();
-        
+
         $.ajax({
             url: "http://localhost:8080/userInfo",
             type: 'get',
@@ -76,11 +76,11 @@ $(document).ready(function () {
             $("#GPA").text(response.GPA);
             $("#catYear").text(response.CatalogYear);
             //Makes sure that correct classification shows based on hours
-            if (response.Hours < 30) {
+            if (response.Hours <= 29) {
                 $("#class").text("Freshman");
-            } else if (response.Hours > 30 && response.Hours < 60) {
+            } else if (response.Hours >= 30 && response.Hours <= 59) {
                 $("#class").text("Sophomore");
-            } else if (response.Hours > 60 && response.Hours < 90) {
+            } else if (response.Hours >= 60 && response.Hours <= 89) {
                 $("#class").text("Junior");
             } else {
                 $("#class").text("Senior");
@@ -99,7 +99,7 @@ $(document).ready(function () {
 });
 
 //displays student courses for student 
-function studentCourse(studentEmail){
+function studentCourse(studentEmail) {
     $.ajax({
         url: "http://localhost:8080/MyAndAllCourses",
         type: 'get',
@@ -114,8 +114,8 @@ function studentCourse(studentEmail){
         //goes through array to send to function that will display courses with grade and semester
         $.each(response, function (index, value) {
             //if a class has no grade, it will no display
-            if(value.Grade != "n"){
-            displayClasses(value.Name, value.Grade, value.Semester);
+            if (value.Grade != "n") {
+                displayClasses(value.Name, value.Grade, value.Semester);
             }
         });
     }).fail(function (error) {
@@ -125,7 +125,7 @@ function studentCourse(studentEmail){
 }
 
 //displays the courses that students have completed based on the template
-function displayClasses(courses, grades, semester){
+function displayClasses(courses, grades, semester) {
     //making copy of template
     let copy = $(".template").clone();
     //removing template class

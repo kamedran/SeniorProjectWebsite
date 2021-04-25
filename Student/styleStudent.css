@@ -89,3 +89,8 @@ input{
   background-color: white;
   color: #cf4411;
 }
+th{
+  font-size: 30px;
+  text-decoration: underline;
+}
+

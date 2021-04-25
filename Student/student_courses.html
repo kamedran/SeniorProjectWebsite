@@ -470,109 +470,423 @@
             </tr>
           </table>
         </div>
+        <!-- CS ELECTIVES TABLE -->
         <div class="tab-pane fade" id="list-cselectives" role="tabpanel" aria-labelledby="list-cselectives-list">
-          <table style="width:100%">
+          <table style="width:100%; font-size:25px">
             <tr>
-              <th>Course Title</th>
-              <th>Course Subject</th>
-              <th>Course Number</th>
-              <th>Course Hours</th>
+              <th>Programming Languages</th>
+            </tr>
+            <!-- JAVA -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course13">Object Oriented Programming in JAVA</span>
+                  <input id="toshow13" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum13">CSCI 3326</h6>
+                  <div class="courseInfo" id="showing13">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades13">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester13">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn13" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+             <!-- Visual BASIC -->
+             <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course14">Object Oriented Programming in Visual Basic</span>
+                  <input id="toshow14" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum14">CSCI 3327</h6>
+                  <div class="courseInfo" id="showing14">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades14">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester14">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn14" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- C# -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course15">Object Oriented Programming in C#</span>
+                  <input id="toshow15" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum15">CSCI 3328</h6>
+                  <div class="courseInfo" id="showing15">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades15">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester15">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn15" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td>Intro to CS</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
+              <th>Databases, Networking, and Operating Systems</th>
+            </tr>
+            <!-- DATABASE DESIGN -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course16">Database Design and Implementation</span>
+                  <input id="toshow16" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum16">CSCI 4333</h6>
+                  <div class="courseInfo" id="showing16">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades16">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester16">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn16" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- OPERATING SYSTEMS -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course17">Operating Systems</span>
+                  <input id="toshow17" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum17">CSCI 4334</h6>
+                  <div class="courseInfo" id="showing17">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades17">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester17">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn17" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- COMPUTER ARCHITECTURE -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course18">Computer Architecture</span>
+                  <input id="toshow18" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum18">CSCI 4335</h6>
+                  <div class="courseInfo" id="showing18">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades18">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester18">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn18" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <!-- COMPUTER ARCHITECTURE -->
+            <tr>
+              <td>
+                <div class="listCourse">
+                  <span id="course19">Computer Networks</span>
+                  <input id="toshow19" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum19">CSCI 4345</h6>
+                  <div class="courseInfo" id="showing19">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades19">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester19">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn19" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
             <tr>
-              <td>Software Engineering 1</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
+              <th>Technical Electives</th>
             </tr>
+            <!-- INTERNSHIP -->
             <tr>
-              <td>Computer Science II </td>
-              <td>CSCI</td>
-              <td>2303 </td>
-              <td>3</td>
+              <td>
+                <div class="listCourse">
+                  <span id="course20">Internship in Computer Science</span>
+                  <input id="toshow20" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum20">CSCI 3300</h6>
+                  <div class="courseInfo" id="showing20">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades20">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester20">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn20" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
+            <!-- INTERNET PROGRAMMING -->
             <tr>
-              <td>Software Engineering 1</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
+              <td>
+                <div class="listCourse">
+                  <span id="course21">Internet Programming</span>
+                  <input id="toshow21" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum21">CSCI 3342</h6>
+                  <div class="courseInfo" id="showing21">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades21">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester21">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn21" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
-
           </table>
         </div>
         <div class="tab-pane fade" id="list-generalcore" role="tabpanel" aria-labelledby="list-generalcore-list">
-          <table style="width:100%">
+          <table style="width:100%; font-size:25px">
+            <!-- Digital Systems Engineering I -->
+            <!-- DOES NOT WORK FOR SOME REASON  -->
             <tr>
-              <th>Course Title</th>
-              <th>Course Subject</th>
-              <th>Course Number</th>
-              <th>Course Hours</th>
+              <td>
+                <div class="listCourse">
+                  <span id="course22">Digital Systems Engineering I</span>
+                  <input id="toshow22" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum22">ELEE 2330</h6>
+                  <div class="courseInfo" id="showing22">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades22">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester22">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn22" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <td>Intro to CS</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Software Engineering 1</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Computer Science II </td>
-              <td>CSCI</td>
-              <td>2303 </td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Software Engineering 1</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
-            </tr>
-
           </table>
         </div>
         <div class="tab-pane fade" id="list-support" role="tabpanel" aria-labelledby="list-support-list">
-          <table style="width:100%">
+          <table style="width:100%; font-size:25px">
+            <!-- Technical Communication -->
             <tr>
-              <th>Course Title</th>
-              <th>Course Subject</th>
-              <th>Course Number</th>
-              <th>Course Hours</th>
+              <td>
+                <div class="listCourse">
+                  <span id="course23">Technical Communication</span>
+                  <input id="toshow23" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum23">ENGL 3342</h6>
+                  <div class="courseInfo" id="showing23">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades23">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester23">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn23" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
+            <!-- Digital Systems Engineering I Lab -->
             <tr>
-              <td>Introduction to Computer Science</td>
-              <td>CSCI</td>
-              <td>1101</td>
-              <td>3</td>
+              <td>
+                <div class="listCourse">
+                  <span id="course24">Digital Systems Engineering I Lab</span>
+                  <input id="toshow24" type="checkbox" style="margin-right: 20px" onclick="ifchecked()" />
+                  <h6 id="courseNum24">ELEE 2130</h6>
+                  <div class="courseInfo" id="showing24">
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="grades24">
+                        <option selected>Grade</option>
+                        <option value="1">A</option>
+                        <option value="2">B</option>
+                        <option value="3">C</option>
+                        <option value="4">D</option>
+                        <option value="5">F</option>
+                      </select>
+                    </div>
+                    <div class="input-group mb-1 w-25">
+                      <select class="form-select" id="semester24">
+                        <option selected>Semester</option>
+                        <option value="1">Fall</option>
+                        <option value="2">Spring</option>
+                        <option value="3">Summer 1</option>
+                        <option value="4">Summer 2</option>
+                      </select>
+                    </div>
+                    <button class="btn addCourse" type="button" id="coursesBtn24" value="1"> Add Course </button>
+                    <button class="btn planned Course" type="button" id="courses"> Planned Course </button>
+                  </div>
+                </div>
+              </td>
             </tr>
-            <tr>
-              <td>Engineering Computer Science l Lab</td>
-              <td>CSCI</td>
-              <td>1170</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Computer Science II </td>
-              <td>CSCI</td>
-              <td>2303 </td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>Software Engineering 1</td>
-              <td>CSCI</td>
-              <td>1301</td>
-              <td>3</td>
-            </tr>
-
           </table>
         </div>
       </div>
@@ -656,6 +970,78 @@
         $("#showing12").removeClass("courseInfo");
       } else {
         $("#showing12").addClass("courseInfo");
+      }
+      //JAVA
+      if (document.getElementById('toshow13').checked) {
+        $("#showing13").removeClass("courseInfo");
+      } else {
+        $("#showing13").addClass("courseInfo");
+      }
+      //VISUAL BASIC
+      if (document.getElementById('toshow14').checked) {
+        $("#showing14").removeClass("courseInfo");
+      } else {
+        $("#showing14").addClass("courseInfo");
+      }
+      //C#
+      if (document.getElementById('toshow15').checked) {
+        $("#showing15").removeClass("courseInfo");
+      } else {
+        $("#showing15").addClass("courseInfo");
+      }
+      //DATABASE DESIGN 
+      if (document.getElementById('toshow16').checked) {
+        $("#showing16").removeClass("courseInfo");
+      } else {
+        $("#showing16").addClass("courseInfo");
+      }
+      //OPERATING SYSTEMS
+      if (document.getElementById('toshow17').checked) {
+        $("#showing17").removeClass("courseInfo");
+      } else {
+        $("#showing17").addClass("courseInfo");
+      }
+      //COMPUTER ARCHITECTURE
+      if (document.getElementById('toshow18').checked) {
+        $("#showing18").removeClass("courseInfo");
+      } else {
+        $("#showing18").addClass("courseInfo");
+      }
+      //COMPUTER NETWORKS
+      if (document.getElementById('toshow19').checked) {
+        $("#showing19").removeClass("courseInfo");
+      } else {
+        $("#showing19").addClass("courseInfo");
+      }
+      //INTERNSHIP
+      if (document.getElementById('toshow20').checked) {
+        $("#showing20").removeClass("courseInfo");
+      } else {
+        $("#showing20").addClass("courseInfo");
+      }
+      //INTERNET PROGRAMMING
+      if (document.getElementById('toshow21').checked) {
+        $("#showing21").removeClass("courseInfo");
+      } else {
+        $("#showing21").addClass("courseInfo");
+      }
+      //DIGITAL SYSTEMS
+      if (document.getElementById('toshow22').checked) {
+        $("#showing22").removeClass("courseInfo");
+      } else {
+        $("#showing22").addClass("courseInfo");
+      }
+      //TECHNICAL COMM
+      if (document.getElementById('toshow23').checked) {
+        $("#showing23").removeClass("courseInfo");
+      } else {
+        $("#showing23").addClass("courseInfo");
+      }
+      //DIGITAL LAB
+      if (document.getElementById('toshow24').checked) {
+        $("#showing24").removeClass("courseInfo");
+      } else {
+        $("#showing24").addClass("courseInfo");
       }
       
     }

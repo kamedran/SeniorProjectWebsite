@@ -32,7 +32,7 @@
     <a class="nav-link" href="student_courses.html">Courses</a>
     <a class="nav-link" href="student_gpacal.html">GPA Calculator</a>
     <a class="nav-link" href="student_account.html">Account</a>
-    
+
 
   </nav>
 
@@ -47,7 +47,7 @@
     <h2>Total Advanced Hours: <span id="ADhours"> </span></h2>
   </div>
 
-<!--   possibly add progress bar  -->
+  <!--   possibly add progress bar  -->
   <!-- <div class="progress">
     <div class="progress-bar w-75" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
   </div>
@@ -69,11 +69,11 @@
         $("#GPA").text(response.GPA);
         $("#catYear").text(response.CatalogYear);
         //Makes sure that correct classification shows based on hours
-        if (response.Hours < 30) {
+        if (response.Hours <= 29) {
           $("#class").text("Freshman");
-        } else if (response.Hours > 30 && response.Hours < 60) {
+        } else if (response.Hours >= 30 && response.Hours <= 59) {
           $("#class").text("Sophomore");
-        } else if (response.Hours > 60 && response.Hours < 90) {
+        } else if (response.Hours >= 60 && response.Hours <= 89) {
           $("#class").text("Junior");
         } else {
           $("#class").text("Senior");
