@@ -18,6 +18,7 @@ $(document).ready(function () {
                 isAdmin(response);
                 //saves token globally 
                 localStorage.setItem('token', response.token);
+                localStorage.setItem('email', email);
             }).fail(function (error) {
                 //Error message that shows user entered wrong password/email
                 $("#error").removeClass("wrongText");
@@ -50,6 +51,7 @@ function isAdmin(isAdmin) {
 //Function that lets administrator see student information 
 ///This runs the click only once
 $(document).ready(function () {
+    var changedGPA;
     $("#searchingBtn").unbind("click").click(function (event) {
 
         //Empties out DOM from courses, grades and semesters
@@ -73,7 +75,8 @@ $(document).ready(function () {
             //shows student information 
             response = JSON.parse(response);
             $("#student").text(response.FirstName + " " + response.LastName);
-            $("#GPA").text(response.GPA);
+            changedGPA = response.GPA.toFixed(2);
+            $("#GPA").text(changedGPA);
             $("#catYear").text(response.CatalogYear);
             //Makes sure that correct classification shows based on hours
             if (response.Hours <= 29) {
@@ -139,7 +142,26 @@ function displayClasses(courses, grades, semester) {
 }
 
 
+/* $(document).ready(function () {
+    $("#clicking").unbind("click").click(function (event) {
 
+
+        $.ajax({
+            url: "http://localhost:8080/CompleteCourses",
+            type: 'get',
+            headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
+            data: { Email: test },
+        }).done(function (response) {
+            //removes error message when correct user is entered
+           console.log("hello")
+        }).fail(function () {
+            //Error message that shows user entered wrong password/email
+            $("#error").removeClass("wrongText");
+            $("#hidden").addClass("information");
+            $("#title").addClass("removal");
+        })
+    });
+}); */
 
 
 
@@ -168,4 +190,45 @@ $(document).ready(function () {
 });
 
 
+/* $(document).ready(function () {
+    var test = "test"
+    $("#clicking2").unbind("click").click(function (event) {
+    
+        $.ajax({
+        url: "http://localhost:8080/CompleteCourses",
+        type: 'get',
+        headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
+        data: { Email: test },
+    }).done(function (response) {
+        //removes error message when correct user is entered
+       //show title of courses
+       //$("#title").removeClass("removal");
+       response = JSON.parse(response);
+       //goes through array to send to function that will display courses with grade and semester
+       $.each(response, function (index, value) {
+        //if a class has no grade, it will no display
+        if (value.Grade != "n") {
+            displayClasses(value.Name, value.Grade, value.Semester);
+        }
+    });
+    }).fail(function () {
+        //Error message that shows user entered wrong password/email
+        $("#error").removeClass("wrongText");
+        $("#hidden").addClass("information");
+        $("#title").addClass("removal");
+    })
+});
+});
 
+function displayClasses2(courses, grades, semester) {
+    //making copy of template
+    let copy = $(".template").clone();
+    //removing template class
+    copy.removeClass("template");
+    //replaces text with name of course
+    copy.find(".name").text(courses);
+    copy.find(".grade").text("Grade: " + grades);
+    copy.find(".semester").text("Semester: " + semester);
+    //displays list
+    $("#course-list").append(copy);
+} */

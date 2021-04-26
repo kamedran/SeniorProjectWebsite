@@ -93,4 +93,9 @@ th{
   font-size: 30px;
   text-decoration: underline;
 }
+#box{
+  border-bottom: 2px solid black;
+  color: white;
+}
+
 

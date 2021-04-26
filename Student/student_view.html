@@ -30,6 +30,7 @@
   <nav class="nav tabs">
     <a class="nav-link active" aria-current="page" href="student_view.html">Overview</a>
     <a class="nav-link" href="student_courses.html">Courses</a>
+    <a class="nav-link" id="clicking2" href="completed_courses.html">Completed Courses</a>
     <a class="nav-link" href="student_gpacal.html">GPA Calculator</a>
     <a class="nav-link" href="student_account.html">Account</a>
 
@@ -57,6 +58,7 @@
   <script>
     //displays student information when loaded
     function myfunction() {
+      var changedGPA;
       $.ajax({
         url: "http://localhost:8080/MyInfo",
         type: 'get',
@@ -66,7 +68,8 @@
       }).done(function (response) {
         response = JSON.parse(response);
         $("#student").text(response.FirstName + " " + response.LastName);
-        $("#GPA").text(response.GPA);
+        changedGPA = response.GPA.toFixed(2);
+        $("#GPA").text(changedGPA);
         $("#catYear").text(response.CatalogYear);
         //Makes sure that correct classification shows based on hours
         if (response.Hours <= 29) {
