@@ -69,6 +69,7 @@
         response = JSON.parse(response);
         $("#student").text(response.FirstName + " " + response.LastName);
         changedGPA = response.GPA.toFixed(2);
+        localStorage.setItem('gpa', response.GPA);
         $("#GPA").text(changedGPA);
         $("#catYear").text(response.CatalogYear);
         //Makes sure that correct classification shows based on hours
@@ -81,6 +82,7 @@
         } else {
           $("#class").text("Senior");
         }
+        localStorage.setItem('hours', response.Hours);
         $("#hours").text(response.Hours);
         $("#ADhours").text(response.AdvancedHours);
       }).fail(function (error) {

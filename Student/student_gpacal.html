@@ -125,7 +125,8 @@
                  
        <SCRIPT LANGUAGE="JavaScript">
     
-     
+    var gpa2 = localStorage.getItem('gpa')
+    var hours = localStorage.getItem('hours')
     
     function gpacalc()
     
@@ -281,16 +282,25 @@
     
         }
     
+    gpa2 = parseFloat(gpa2);
+    hours = parseFloat(hours);
+    //This gets all the points for all semesters
+    var currentGPA = gpa2 * hours
     
-    
+    allcr = parseFloat(allcr);
+    allgr = parseFloat(allgr);
     gpa = allgr / allcr;
-    
-    
-     //alert("GPA =  " + eval(gpa)); 
+    //This gets all the point for the current semester
+    var termGPA = gpa * allcr;
 
-     $("#calgpa").text("GPA =  " + eval(gpa)).show();
-    
-    
+    //Adds all hours taken and hours taken in semester
+    var totalhours = hours + allcr;
+     
+    //cummulative gpa is done by adding points from both past semester and current 
+    //semester to then divide by all the hours that the student has taken
+     var cummulativeGPA = (currentGPA + termGPA)/totalhours
+     cummulativeGPA = cummulativeGPA.toFixed(2);
+     $("#calgpa").text(cummulativeGPA);
     
     
     return 0;
