@@ -39,10 +39,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning1").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting1").removeClass("removingbox");
         })
     });
 });
@@ -88,10 +88,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning2").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting2").removeClass("removingbox");
         })
     });
 });
@@ -137,10 +137,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning3").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting3").removeClass("removingbox");
         })
     });
 });
@@ -186,10 +186,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning4").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting4").removeClass("removingbox");
         })
     });
 });
@@ -235,10 +235,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning5").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting5").removeClass("removingbox");
         })
     });
 });
@@ -284,10 +284,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning6").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting6").removeClass("removingbox");
         })
     });
 });
@@ -333,10 +333,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning7").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting7").removeClass("removingbox");
         })
     });
 });
@@ -382,10 +382,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning8").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting8").removeClass("removingbox");
         })
     });
 });
@@ -431,10 +431,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning9").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting9").removeClass("removingbox");
         })
     });
 });
@@ -480,10 +480,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning10").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting10").removeClass("removingbox");
         })
     });
 });
@@ -529,10 +529,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning11").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting11").removeClass("removingbox");
         })
     });
 });
@@ -578,10 +578,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning12").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting12").removeClass("removingbox");
         })
     });
 });
@@ -627,10 +627,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning13").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting13").removeClass("removingbox");
         })
     });
 });
@@ -676,10 +676,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning14").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting14").removeClass("removingbox");
         })
     });
 });
@@ -725,10 +725,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning15").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting15").removeClass("removingbox");
         })
     });
 });
@@ -774,10 +774,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning16").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting16").removeClass("removingbox");
         })
     });
 });
@@ -823,10 +823,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning17").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting17").removeClass("removingbox");
         })
     });
 });
@@ -872,10 +872,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning18").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting18").removeClass("removingbox");
         })
     });
 });
@@ -921,10 +921,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning19").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting19").removeClass("removingbox");
         })
     });
 });
@@ -970,10 +970,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning20").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting20").removeClass("removingbox");
         })
     });
 });
@@ -1019,10 +1019,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning21").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting21").removeClass("removingbox");
         })
     });
 });
@@ -1068,10 +1068,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning22").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting22").removeClass("removingbox");
         })
     });
 });
@@ -1117,10 +1117,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning23").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting23").removeClass("removingbox");
         })
     });
 });
@@ -1166,10 +1166,10 @@ $(document).ready(function () {
             data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
         }).done(function (response) {
             //show title of courses
-            console.log("completed")
+            $("#warning24").removeClass("addingbox");
         }).fail(function (error) {
             //shows you failed
-            console.log(courseName)
+            $("#alerting24").removeClass("removingbox");
         })
     });
 });
