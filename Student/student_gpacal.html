@@ -47,7 +47,15 @@
 
 
 
-<h1>Calculate your GPA: </h1>
+
+<div>
+    <h1> Calcuate your GPA: <span id="calgpa"> </span> </h1>
+  </div>
+
+
+
+
+<!-- <h1>Calculate your GPA: </h1> -->
 <CENTER>
     <FORM Name="GPACalcForm">
         <TABLE BORDER=5 BGCOLOR=#C0C0C0 CELLPADDING="5" CELLSPACING="2">
@@ -277,7 +285,9 @@
     gpa = allgr / allcr;
     
     
-     alert("GPA =  " + eval(gpa)); 
+     //alert("GPA =  " + eval(gpa)); 
+
+     $("#calgpa").text("GPA =  " + eval(gpa)).show();
     
     
     
