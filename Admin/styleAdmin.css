@@ -97,6 +97,18 @@ h1{
 #title{
   text-decoration: underline;
 }
+label{
+  color: white;
+}
+#addcourse{
+  background-color: white;
+  color: #cf4411;
+}
+input{
+  font-style: italic;
+}
+
+
 
 
 

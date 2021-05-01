@@ -142,28 +142,6 @@ function displayClasses(courses, grades, semester) {
 }
 
 
-/* $(document).ready(function () {
-    $("#clicking").unbind("click").click(function (event) {
-
-
-        $.ajax({
-            url: "http://localhost:8080/CompleteCourses",
-            type: 'get',
-            headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
-            data: { Email: test },
-        }).done(function (response) {
-            //removes error message when correct user is entered
-           console.log("hello")
-        }).fail(function () {
-            //Error message that shows user entered wrong password/email
-            $("#error").removeClass("wrongText");
-            $("#hidden").addClass("information");
-            $("#title").addClass("removal");
-        })
-    });
-}); */
-
-
 
 
 //Registers the user
@@ -190,45 +168,30 @@ $(document).ready(function () {
 });
 
 
-/* $(document).ready(function () {
-    var test = "test"
-    $("#clicking2").unbind("click").click(function (event) {
-    
-        $.ajax({
-        url: "http://localhost:8080/CompleteCourses",
-        type: 'get',
-        headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
-        data: { Email: test },
-    }).done(function (response) {
-        //removes error message when correct user is entered
-       //show title of courses
-       //$("#title").removeClass("removal");
-       response = JSON.parse(response);
-       //goes through array to send to function that will display courses with grade and semester
-       $.each(response, function (index, value) {
-        //if a class has no grade, it will no display
-        if (value.Grade != "n") {
-            displayClasses(value.Name, value.Grade, value.Semester);
-        }
-    });
-    }).fail(function () {
-        //Error message that shows user entered wrong password/email
-        $("#error").removeClass("wrongText");
-        $("#hidden").addClass("information");
-        $("#title").addClass("removal");
-    })
-});
-});
+//Function that lets administrator add courses
+///This runs the click only once
+$(document).ready(function () {
+    $("#addcourse").unbind("click").click(function (event) {
 
-function displayClasses2(courses, grades, semester) {
-    //making copy of template
-    let copy = $(".template").clone();
-    //removing template class
-    copy.removeClass("template");
-    //replaces text with name of course
-    copy.find(".name").text(courses);
-    copy.find(".grade").text("Grade: " + grades);
-    copy.find(".semester").text("Semester: " + semester);
-    //displays list
-    $("#course-list").append(copy);
-} */
+        event.preventDefault();
+        let courseName = $("#courseName").val().trim();
+        let courseDept = $("#courseDept").val().trim();
+        let institute = $("#institute").val().trim();
+        let courseNum = $("#courseNum").val().trim();
+        //let courseCredit = $("#courseCredit").val().trim();
+
+        $.ajax({
+            url: "http://localhost:8080/add/Course",
+            type: 'post',
+            headers: { "Authorization": 'Bearer ' + localStorage.getItem('token') },
+            data: { CourseDept: courseDept, CourseNum: courseNum, Name: courseName, Institution: institute},
+        }).done(function (response) {
+                $("#error2").removeClass("wrongText");
+                $("#error1").addClass("wrongText");
+        }).fail(function (xhr, statusText, errorThrown) {
+            if (xhr.status == 409) {
+                $("#error1").removeClass("wrongText");
+            }
+        })
+    });
+});
