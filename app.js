@@ -162,6 +162,15 @@ $(document).ready(function () {
 
             }).done(function () {
                 $("#success").removeClass("wrongText");
+                $("#exists").addClass("wrongText");
+            }).fail(function (xhr, statusText, errorThrown) {
+                if (xhr.status == 400) {
+                    $("#missing").removeClass("wrongText");
+                }
+                if (xhr.status == 422) {
+                    $("#exists").removeClass("wrongText");
+                }
+
             })
         }
     });
