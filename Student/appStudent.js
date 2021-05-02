@@ -1173,3 +1173,591 @@ $(document).ready(function () {
         })
     });
 });
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester25");
+    let grades = document.getElementById("grades25");
+    let course = document.getElementById("course25")
+    let courseNum = document.getElementById("courseNum25")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn25").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning25").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting25").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester26");
+    let grades = document.getElementById("grades26");
+    let course = document.getElementById("course26")
+    let courseNum = document.getElementById("courseNum26")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn26").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning26").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting26").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester27");
+    let grades = document.getElementById("grades27");
+    let course = document.getElementById("course27")
+    let courseNum = document.getElementById("courseNum27")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn27").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning27").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting27").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester28");
+    let grades = document.getElementById("grades28");
+    let course = document.getElementById("course28")
+    let courseNum = document.getElementById("courseNum28")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn28").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning28").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting28").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester44");
+    let grades = document.getElementById("grades44");
+    let course = document.getElementById("course44")
+    let courseNum = document.getElementById("courseNum44")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn44").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning44").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting44").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester44");
+    let grades = document.getElementById("grades44");
+    let course = document.getElementById("course44")
+    let courseNum = document.getElementById("courseNum44")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn44").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning44").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting44").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester45");
+    let grades = document.getElementById("grades45");
+    let course = document.getElementById("course45")
+    let courseNum = document.getElementById("courseNum45")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn45").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning45").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting45").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester50");
+    let grades = document.getElementById("grades50");
+    let course = document.getElementById("course50")
+    let courseNum = document.getElementById("courseNum50")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn50").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning50").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting50").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester51");
+    let grades = document.getElementById("grades51");
+    let course = document.getElementById("course51")
+    let courseNum = document.getElementById("courseNum51")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn51").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning51").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting51").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester52");
+    let grades = document.getElementById("grades52");
+    let course = document.getElementById("course52")
+    let courseNum = document.getElementById("courseNum52")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn52").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning52").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting52").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester53");
+    let grades = document.getElementById("grades53");
+    let course = document.getElementById("course53")
+    let courseNum = document.getElementById("courseNum53")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn53").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning53").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting53").removeClass("removingbox");
+        })
+    });
+});
+
+//FUNCTION TO DIGITAL LAB
+$(document).ready(function () {
+    let semester = document.getElementById("semester46");
+    let grades = document.getElementById("grades46");
+    let course = document.getElementById("course46")
+    let courseNum = document.getElementById("courseNum46")
+    let completed = "Complete";
+    ///This runs the click only once
+    $("#coursesBtn46").unbind("click").click(function (event) {
+        event.preventDefault();
+        if (semester.value == 1) {
+            semester = "Fall"
+        } else if (semester.value == 2) {
+            semester = "Spring"
+        } else if (semester.value == 3) {
+            semester = "Summer 1"
+        } else {
+            semester = "Summer 2"
+        }
+        if (grades.value == 1) {
+            grades = "A"
+        } else if (grades.value == 2) {
+            grades = "B"
+        } else if (grades.value == 3) {
+            grades = "C"
+        } else if (grades.value == 4) {
+            grades = "D"
+        } else {
+            grades = "F"
+        }
+        let courseName = courseNum.textContent + " " + course.textContent;
+
+        $.ajax({
+            url: "http://localhost:8080/selfadd/StudentCourses",
+            type: 'post',
+            headers: {
+                Authorization: 'Bearer ' + localStorage.getItem('token')
+            },
+            data: { Semester: semester, Grade: grades, CourseCompleteness: completed, CourseName: courseName },
+        }).done(function (response) {
+            //show title of courses
+            $("#warning46").removeClass("addingbox");
+        }).fail(function (error) {
+            //shows you failed
+            $("#alerting46").removeClass("removingbox");
+        })
+    });
+});
